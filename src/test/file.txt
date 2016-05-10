@@ -1,0 +1,39 @@
+{"timeStamp": "1462904577990", "value": "150"}
+
+{"timeStamp": "1462904585239", "value": "151"}
+
+{"timeStamp": "1462904592259", "value": "152"}
+
+{"timeStamp": "1462904599268", "value": "153"}
+
+{"timeStamp": "1462904606276", "value": "154"}
+
+{"timeStamp": "1462904613285", "value": "155"}
+
+{"timeStamp": "1462904620297", "value": "156"}
+
+{"timeStamp": "1462904627315", "value": "157"}
+
+{"timeStamp": "1462904634324", "value": "158"}
+
+{"timeStamp": "1462904641333", "value": "159"}
+
+{"timeStamp": "1462904648343", "value": "160"}
+
+{"timeStamp": "1462904655359", "value": "161"}
+
+{"timeStamp": "1462904662367", "value": "162"}
+
+{"timeStamp": "1462904669378", "value": "163"}
+
+{"timeStamp": "1462904606276", "value": "164"}
+
+{"timeStamp": "1462904613285", "value": "165"}
+
+{"timeStamp": "1462904620297", "value": "166"}
+
+{"timeStamp": "1462904627315", "value": "167"}
+
+{"timeStamp": "1462904634324", "value": "168"}
+
+{"timeStamp": "1462904641333", "value": "169"}
