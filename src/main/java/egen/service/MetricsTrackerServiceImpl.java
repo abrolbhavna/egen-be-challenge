@@ -17,6 +17,10 @@ import egen.entity.Metrics;
 import egen.rules.DetectOverWeightRule;
 import egen.rules.DetectUnderWeightRule;
 
+/* ServiceImpl class that provides services to the Controller API   
+ * Services includes adding new row in Metrics collection, reading all data from 
+ * Metrics collection  and reading Metrics collection based on time Range
+ */
 @Service
 public class MetricsTrackerServiceImpl implements MetricsTrackerService{
 
@@ -31,14 +35,18 @@ public class MetricsTrackerServiceImpl implements MetricsTrackerService{
 	}
 	
 	/* create metrics everytime this API is called */
+	
 	public Metrics create(String timeStamp, String value) {
 		Metrics newMetrics = new Metrics();
 		newMetrics.setTimeStamp(timeStamp);
 		newMetrics.setValue(value);
 		Metrics result = repository.save(newMetrics);
 		if(baseWeight == null ) { 
+			
 			baseWeight = result.getValue();
 		}
+	
+		// rules will be triggered as and when the ‘create API’ receives new metrics from the sensor
 		createRuleEngine(result.getValue());
 		return result;
 	}
@@ -85,6 +93,10 @@ public class MetricsTrackerServiceImpl implements MetricsTrackerService{
 		return metricsByTimeRange;
 	}	
 
+	/*
+	 * Rule will be triggered whenever create API call is received to add new metrics
+	 * Also if rules condition is true Action to create new Alerts data will be triggered
+	 */
 	public void createRuleEngine(String currentWeight) {
         // create a rules engine
         RulesEngine rulesEngine = aNewRulesEngine().build();
