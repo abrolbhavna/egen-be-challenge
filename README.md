@@ -25,3 +25,9 @@ readByTimeRange – reads all alerts that are created between the given two time
 Rules will be triggered as and when the ‘create API’ receives new metrics from the sensor. Create these 2 rules using EasyRules,
 Detects under weight – if the weight of the person drops below 10% of his base weight. Create a new alert and save it in MongoDB
 Detects over weight – if the weight of the person shoots 10% over his base weight. Create a new alert and save it in MongoDB
+
+How to build it?
+
+mvn clean package
+This creates a jar file in target directory 'egen-be-challenge-0.0.1-SNAPSHOT.jar'
+
