@@ -8,9 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import egen.entity.Alerts;
 
+/* ServiceImpl class that provides services to the Controller API   
+ * Services includes adding new row in Alerts collection, reading all data from 
+ * Alerts collection  and reading Alerts collection based on time Range
+ */
+@Service
 public class AlertsTrackerServiceImpl implements AlertsTrackerService{
 
 	@Autowired
@@ -73,6 +79,5 @@ public class AlertsTrackerServiceImpl implements AlertsTrackerService{
 		return alertsByTimeRange;
 
 	}
-
 
 }
